@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
                          if(n%2 == 0)
                                 System.out.println( "Even ");
                          else if(n<0)
-                                     System.out.println("Invalid "); 
+                                     System.out.println("invalid "); 
                          else
                                 System.out.println(" Odd ");
                        } 
