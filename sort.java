@@ -1,41 +1,37 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+/* package whatever; // don't place package name! */
+
 import java.util.Scanner;
 
-class sort
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		int n, temp,middle;
-		Scanner sc=new Scanner(System.in);
-	    n = sc.nextInt();
-        int a[] = new int[n];
-        for (int i = 0; i < n; i++) 
+class sort{
+  public static void main(String []args) {
+    int num, i, j, temp;
+    Scanner input = new Scanner(System.in);
+ 
+    
+    num = input.nextInt();
+ 
+    int array[] = new int[num];
+ 
+    System.out.println("" + num + " integers: ");
+ 
+    for (i = 0; i < num; i++) 
+      array[i] = input.nextInt();
+ 
+    for (i = 0; i < ( num - 1 ); i++) {
+      for (j = 0; j < num - i - 1; j++) {
+        if (array[j] > array[j+1]) 
         {
-            a[i] = sc.nextInt();
+           temp = array[j];
+           array[j] = array[j+1];
+           array[j+1] = temp;
         }
-        for (int i = 0; i < n; i++) 
-        {
-            for (int j = i + 1; j < n; j++) 
-            {
-                if (a[i] > a[j]) 
-                {
-                    temp = a[i];
-                    a[i] = a[j];
-                    a[j] = temp;        
-        Scanner s = new Scanner(System.in);
-
-                }
-            }
-        }
-        for (int i = 0; i < n - 1; i++) 
-        {
-            System.out.print(a[i] + ",");
-        }
-        System.out.print(a[n - 1]);
-        
-	}
+      }
+    }
+ 
+  
+ 
+    for (i = 0; i < num; i++) 
+      System.out.println(array[i]);
+  }
 }
 	
